@@ -3,55 +3,72 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>My Starter Template</title>
+  <title>Promotoout</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/newstyles.css">
+  <link rel="shortcut icon" href="images/logosmall.png"/>
 </head>
 <body>
   <nav class="indigo" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">PromoToout</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo left-align">PromoToout</a>
      <ul class="right hide-on-med-and-down">
-        <li><a href="#"><i class="material-icons">search</i></a></li>
-        <li><a href="#">Categorìas</a></li>
+        <li><a href="#iconsection">Categorìas</a></li>
         <li><a href="#">Tiendas</a></li>
         <li><a href="#">Marcas</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#"><i class="material-icons">search</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#"><i class="material-icons">search</i>Buscar</a></li>
         <li><a href="#">Categorìas</a></li>
         <li><a href="#">Tiendas</a></li>
         <li><a href="#">Marcas</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#"><i class="material-icons">search</i></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  
-  <div class="section no-pad-bot" id="index-banner">
+
+  <div class="section no-pad-bot hide-on-small-only" id="index-banner" style="background-image: url(images/parallax1.png); background-repeat: no-repeat; padding-bottom: 8%; max-width: 100%; max-height: 100%;">
     <div class="container">
       <br><br>
-      <h1 class="header center blue-text">Bienvenido a <b>PromoToout</b></h1>
+      <h1 class="header center blue-text" style="letter-spacing: 5px;">Bienvenido a <b>PromoToout</b></h1>
       <div class="row center">
         <h5 class="header col s12 light">Una Página web, un Directorio Digital</h5>
       </div>
       <div class="row center">
-        <a href="#info" id="download-button" class="btn-large waves-effect waves-light green accent-3"><i class="material-icons" style="vertical-align: middle;">chevron_right</i>Comencemos</a>
+        <a href="#section1" id="download-button" class="btn-large waves-effect waves-light green accent-3"><i class="material-icons" style="vertical-align: middle;">chevron_right</i>Comencemos</a>
       </div>
       <br><br>
-
     </div>
   </div>
 
-  <div class="container">
+  <div class="section no-pad-bot hide-on-large-only" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h2 class="header center blue-text">Bienvenido a <b>PromoToout</b></h2>
+      <div class="row center">
+        <h5 class="header col s12 light">Una Página web, un Directorio Digital</h5>
+      </div>
+      <div class="row center">
+        <a href="#section1" id="download-button" class="btn-large waves-effect waves-light green accent-3 js-scroll-trigger"><i class="material-icons" style="vertical-align: middle;">chevron_right</i>Comencemos</a>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+  <div class="container" id="section1">
     <div class="section">
 
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 class="teal-text">¿Qué es PromoToout?</h4>
+          <h4 class="teal-text">¿Qué es PromoToout?</h4><br>
           <p class="left-align light flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
@@ -60,7 +77,7 @@
   </div>
 
   <div class="container">
-    <div class="section">
+    <div class="section" id="iconsection">
 
       <!--   Icon Section   -->
       <div class="row">
@@ -125,7 +142,7 @@
   </div>
 </div>
 
-  <footer class="page-footer red">
+  <footer class="page-footer indigo">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -168,6 +185,35 @@
         alert("¡Hola Mundo!");
       });
     });
+
+    /*function testScroll(ev){
+      if(window.pageYOffset>400)alert('User has scrolled at least 400 px!');
+      }
+    window.onscroll=testScroll*/
+
+  </script>
+  <script>
+    $(function(){
+
+     $('a[href*=#]').click(function() {
+      console.log("Hi There!");
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+       var $target = $(this.hash);
+
+       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+       if ($target.length) {
+         var targetOffset = $target.offset().top;
+
+         $('html,body').animate({scrollTop: targetOffset}, 500);
+         return false;
+      }
+       }
+   });
+});
   </script>
 
   </body>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Promotoout</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/newstyles.css">
+</head>
+<body>
+  <nav class="indigo" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo left-align">PromoToout</a>
+     <ul class="right hide-on-med-and-down">
+        <li><a href="#">Categorìas</a></li>
+        <li><a href="#">Tiendas</a></li>
+        <li><a href="#">Marcas</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#"><i class="material-icons">search</i></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Categorìas</a></li>
+        <li><a href="#">Tiendas</a></li>
+        <li><a href="#">Marcas</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#"><i class="material-icons">search</i></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<h2 class="center-align tile-color blue-text">Categorías</h2>
+<div class="categories-section">
+   <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body">
+         <ul class="collection">
+          <li class="collection-item avatar">
+            <a href="#">
+              <i class="material-icons circle">folder</i>
+              <span class="title" style="vertical-align: middle;">klsjflksajflksjdl</span>
+              <p class="secondary-content"><i class="material-icons">send</i></p>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Title</span>
+            <p>First Line
+            <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p>First Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+          </li>
+        </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+  </ul>
+</div>
+
+  <footer class="page-footer indigo">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $("document").ready(function(){
+      $("#button1").click(function fntSaludo(){
+        alert("¡Hola Mundo!");
+      });
+    });
+
+    /*function testScroll(ev){
+    if(window.pageYOffset>400)alert('User has scrolled at least 400 px!');
+}
+window.onscroll=testScroll*/
+
+  </script>
+  <script>
+    $(function(){
+
+     $('a[href*=#]').click(function() {
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+             var $target = $(this.hash);
+
+             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+             if ($target.length) {
+
+                 var targetOffset = $target.offset().top;
+
+                 $('html,body').animate({scrollTop: targetOffset}, 500);
+
+                 return false;
+
+            }
+
+       }
+
+   });
+
+});
+  </script>
+
+  </body>
+</html>
