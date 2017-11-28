@@ -5,36 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Promotoout</title>
 
-  <!-- CSS  -->
+  <!-- se incluyen librerìas CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="shortcut icon" href="images/logosmall.png"/>
+  <!-- se incluyen librerìas CSS  -->
+  <link rel="shortcut icon" href="images/parallax1.png"/>
+  <!-- Se importa JQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Se importa JQuery -->
 </head>
 <body>
   
-  <div class="">
-    <nav class="indigo" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo left-align">PromoToout</a>
-     <ul class="right hide-on-med-and-down">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#iconsection">Categorìas</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#"><i class="material-icons">search</i></a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#iconsection" id="menu1">Categorìas</a></li>
-        <li><a href="#">Tiendas</a></li>
-        <li><a href="#">Marcas</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#"><i class="material-icons">search</i></a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  </div>
-
+  <!--Incluimos el menù -->
+  <?php include("menu.php"); ?>
+  <!--Incluimos el menù -->
+  
   <div class="section no-pad-bot hide-on-small-only" id="index-banner" style="background-image: url(images/parallax1.png); background-repeat: no-repeat; padding-bottom: 8%; max-width: 100%; max-height: 100%;">
     <div class="container">
       <br><br>
@@ -177,7 +163,6 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script>
@@ -193,33 +178,7 @@
     window.onscroll=testScroll*/
 
   </script>
-  <script>
-    $(function(){
-     $('a[href*=#]').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
-        var $target = $(this.hash);
 
-        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-       if ($target.length) {
-         var targetOffset = $target.offset().top;
-
-         $('html,body').animate({scrollTop: targetOffset}, 500);
-         return false;
-            }
-          }
-        });
-      });
-
-
-    $('.button-collapse').side-nav({
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
-
-
-  </script>
 
   </body>
 </html>
